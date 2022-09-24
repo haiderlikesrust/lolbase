@@ -1,0 +1,20 @@
+[package]
+name = "lolbase"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib/mod.rs"
+[dependencies]
+axum = { version = "0.5.16", features = ["multipart"] }
+serde = "1.0.144"
+serde_json = "1.0.85"
+tokio = { version = "1.21.1", features = ["full"] }
+uuid = { version = "1.1.2", features = ["serde", "v4"] }
+sqlx = { version = "0.6", features = [ "runtime-actix-native-tls" , "postgres", "uuid", "chrono", "json"] }
+thiserror = "1.0.35"
+chrono = { version = "0.4.22", features = ["serde"] }
+strum = { version = "0.24.1", features = ["derive"] }
+http = "0.2.8"
